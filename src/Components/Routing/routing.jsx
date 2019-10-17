@@ -6,7 +6,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import Home from './Home/home.jsx';
+import Home from '../Home/home.jsx';
 // import About from './about';
 // import Contact from './contact';
 

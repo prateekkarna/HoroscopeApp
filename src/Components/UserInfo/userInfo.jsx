@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ZodiacComponent from '../zodiacComponent.jsx'
 
 class UserInfo extends React.Component{
     constructor(props){
@@ -44,10 +45,10 @@ class UserInfo extends React.Component{
                 <form className="form-inline" onSubmit={this.handleOnSubmitInfo}>
                 <div className = "row">
                 <div className="form-group col-sm-3">
-                    <input className="form-control" type="text" value={this.state.firstname} onChange={this.handleChange}  placeholder="First name"/>
+                    <input className="form-control" name = "name" type="text" value={this.state.firstname} onChange={this.handleChange}  placeholder="First name"/>
                 </div>
                 <div className="form-group col-sm-3">
-                    <input className="form-control" type="text" value={this.state.lastname} onChange={this.handleChange}  placeholder="Last name"/>
+                    <input className="form-control" name = "lastname" type="text" value={this.state.lastname} onChange={this.handleChange}  placeholder="Last name"/>
                 </div>
                 <div className="form-group col-sm-3">
                     <input type="date" className="form-control date" value={this.state.dob} onChange={this.handleChange} name="dob"/>
@@ -60,7 +61,9 @@ class UserInfo extends React.Component{
                 
                 
             </form>
+            <ZodiacComponent name = {this.state.name + this. state.lastname}/>
             </div>
+            
         )
 
     }

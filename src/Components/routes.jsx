@@ -1,25 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-import Home from './Home/home.jsx';
-// import About from './about';
-// import Contact from './contact';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom';
+import HoroscopeDetails from './UserHoroscope/userHoroscope.jsx'
+import UserInfo from './UserInfo/userInfo.jsx';
 
 
-class Routes extends React.Component{
-    render(){
-        return(
+
+ const Routes = () => {
+    return (
         <Switch>
-          <Route exact path="/" component = {Home}></Route>
-          {/* <Route path="/about" component = {About}></Route>         
-          <Route path="/contact" component = {Contact}></Route> */}
-        </Switch>)
-    }
+            <Route exact path='/' component={UserInfo}/>
+            <Route exact path='/aries' component = {(props) => (<HoroscopeDetails   name = {'XYZ'} sign = {'aries'} {...props}/>)}/>
+            <Route exact path='/cancer' component = {(props) => (<HoroscopeDetails   name = {'XYZ'} sign = {'cancer'} {...props}/>)}/>
+            
+
+            {/* <Route exact path='/about' component={About} />
+            <Route exact path='/help' component={Help} />
+            <Route path="*" exact={true} component={NotFound} /> */}
+        </Switch>
+    )
 }
 
 export default Routes;

@@ -7,7 +7,7 @@ import {
    Route,
    Link
  } from "react-router-dom";
-import Routes from './routes.jsx';
+import Routes from './routes.jsx'
 import NavigationBar from './NavigationBar/navBar.jsx'
 
 class App extends React.Component{

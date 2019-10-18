@@ -39,18 +39,28 @@ class UserInfo extends React.Component{
             //     <input type="submit" value="Show my Horoscope!"/>
             // </form>
 
-            <form className="form-inline" onSubmit={this.handleOnSubmitInfo}>
-                <div className="form-group">
-                    <input className="form-control-plaintext" type="text" value={this.state.firstname} onChange={this.handleChange}  placeholder="First name"/>
+            <div style={{'marginTop' : '2%', 'marginLeft' : '2%'
+        }}>
+                <form className="form-inline" onSubmit={this.handleOnSubmitInfo}>
+                <div className = "row">
+                <div className="form-group col-sm-3">
+                    <input className="form-control" type="text" value={this.state.firstname} onChange={this.handleChange}  placeholder="First name"/>
                 </div>
-                <div className="form-group">
-                    <input className="form-control-plaintext" type="text" value={this.state.lastname} onChange={this.handleChange}  placeholder="Last name"/>
+                <div className="form-group col-sm-3">
+                    <input className="form-control" type="text" value={this.state.lastname} onChange={this.handleChange}  placeholder="Last name"/>
                 </div>
-                <div className="form-group">
-                    <input type="date" className="input-group date" value={this.state.dob} onChange={this.handleChange} name="dob"/>
+                <div className="form-group col-sm-3">
+                    <input type="date" className="form-control date" value={this.state.dob} onChange={this.handleChange} name="dob"/>
                 </div>
+                <div className=" col-sm-3">
                 <button type="submit" className="btn btn-primary">Show my Horoscope!</button>
+                </div>
+                </div>
+                
+                
+                
             </form>
+            </div>
         )
 
     }
